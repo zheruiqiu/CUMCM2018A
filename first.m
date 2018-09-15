@@ -36,11 +36,13 @@ for i=1:time_TT/step_t
         ];
 end
 
-x = 1:77;
+x = (1:77)*0.2;
 y = 0:time_TT;
 U = U(y*1000+1,:);
 [X,Y] = meshgrid(x,y);
+figure
 mesh(X,Y,U)
+
 %save('U_x_t.mat','U')
 
 toc
